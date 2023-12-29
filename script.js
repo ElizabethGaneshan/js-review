@@ -158,11 +158,15 @@ book
 const { title, author, pages, publicationDate,genres } = book;
 console.log(title, author, pages, publicationDate);
 
-const primaryGenre = genres[0]
+// const primaryGenre = genres[0]
 
-const genresList = genres.map((item, index) => {
-    console.log(item);
-    return item;
-})
+// const genresList = genres.map((item, index) => {
+//     console.log(item);
+//     return item;
+// })
 
-console.log(genresList);
+// console.log(genresList);
+
+const [primaryGenre, secondaryGenre] = genres;
+
+console.log(primaryGenre,secondaryGenre,);
