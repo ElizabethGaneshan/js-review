@@ -155,7 +155,7 @@ const book = getBook(2);
 book
 
 
-const { title, author, pages, publicationDate,genres } = book;
+const { title, author, pages, publicationDate,genres,reviews } = book;
 console.log(title, author, pages, publicationDate);
 
 // const primaryGenre = genres[0]
@@ -167,6 +167,9 @@ console.log(title, author, pages, publicationDate);
 
 // console.log(genresList);
 
+
+
+// ////////Spread operator in ARRAYS////////
 const [primaryGenre, secondaryGenre, ...others] = genres;
 
 console.log(primaryGenre, secondaryGenre,others);
@@ -177,3 +180,14 @@ newGenres;
 
 const tempGenres = ["epic fantasy", ...genres];
 tempGenres
+
+// ////////Spread operator in OBJECTS////////
+
+const updatedBook = {
+    ...book,
+    // Adding a new property
+    moviePublicationDate: "2001-12-19",
+    // OverWriting an existing property
+    pages: 9890
+};
+updatedBook
