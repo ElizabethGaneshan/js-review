@@ -167,6 +167,13 @@ console.log(title, author, pages, publicationDate);
 
 // console.log(genresList);
 
-const [primaryGenre, secondaryGenre] = genres;
+const [primaryGenre, secondaryGenre, ...others] = genres;
 
-console.log(primaryGenre,secondaryGenre,);
+console.log(primaryGenre, secondaryGenre,others);
+
+
+const newGenres = [...genres, "epic fantasy"];
+newGenres;
+
+const tempGenres = ["epic fantasy", ...genres];
+tempGenres
